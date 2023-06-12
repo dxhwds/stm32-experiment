@@ -40,6 +40,12 @@ lab_two:实践课源码
 
 
 
+实验现象：
+
+<video src="E:\school\learnig_lab\lab\stm32-experiment\lab_one\lab1_led\IMG_2969.MP4"></video>
+
+
+
 #### 外部中断实验
 
 整体思路：
@@ -57,6 +63,12 @@ STM32F103控制8个LED灯以及通过外部中断按键实现不同灯光效果�
 4.编写外部中断函数，调用封装好的sb流水灯函数
 
 注意清楚中断标志
+
+实验现象：
+
+<video src="E:\school\learnig_lab\lab\stm32-experiment\lab_one\lab2_exti\IMG_2970.MP4"></video>
+
+
 
 
 
@@ -82,6 +94,12 @@ STM32F103控制8个LED灯以及通过外部中断按键实现不同灯光效果�
 
 
 
+实验现象：
+
+<video src="E:\school\learnig_lab\lab\stm32-experiment\lab_one\lab3_timer_hongwai2\IMG_2968.MP4"></video>
+
+
+
 #### 串口通信实验
 
 整体思路：
@@ -93,6 +111,10 @@ STM32F103控制8个LED灯以及通过外部中断按键实现不同灯光效果�
 1.初始化串口
 
 2.编写串口中断函数，主要处理串口发送过来的数据，然后进行控制，（代码里面详细给出了具体逻辑）
+
+实验现象：
+
+<video src="E:\school\learnig_lab\lab\stm32-experiment\lab_one\lab4_usart_hongwai2\IMG_2973.MP4"></video>
 
 
 
