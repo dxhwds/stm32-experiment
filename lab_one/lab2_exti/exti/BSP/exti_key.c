@@ -59,7 +59,7 @@ void EXTI_Key_Init(void)
 		 EXTI_InitStructure.EXTI_Line = EXTI_Line4;//使能外部中断线路4
 		 EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
 		 EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
-		 EXTI_InitStructure.EXTI_LineCmd = ENABLE ;
+		 EXTI_InitStructure.EXTI_LineCmd = ENABLE ; 
 		EXTI_Init(&EXTI_InitStructure);
                 
 
