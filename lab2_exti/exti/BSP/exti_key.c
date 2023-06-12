@@ -5,7 +5,7 @@
 void EXTI_Key_Init(void)
 {
     
-   
+		EXTI_InitTypeDef EXTI_InitStructure;
     GPIO_InitTypeDef GPIO_InitStructure;
     
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB|RCC_APB2Periph_AFIO,ENABLE);//开启PA3和PA4的时钟，并开启复用时钟
@@ -29,7 +29,7 @@ void EXTI_Key_Init(void)
     
     NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);//NVIC初始化配置
@@ -44,10 +44,13 @@ void EXTI_Key_Init(void)
     
 		
 	
-    EXTI_InitTypeDef EXTI_InitStructure;
+    
 	
  
-    EXTI_ClearITPendingBit(EXTI_Line3&EXTI_Line4); //清楚中断线路3和44的挂起
+    EXTI_ClearITPendingBit(EXTI_Line3); //清楚中断线路3和44的挂起
+		EXTI_ClearITPendingBit(EXTI_Line4); //清楚中断线路3和44的挂起
+		
+		
     GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,GPIO_PinSource3);//外部中断配置函数，，连接GPIO和中断
 		GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,GPIO_PinSource4);//外部中断配置函数，，连接GPIO和中断
      
