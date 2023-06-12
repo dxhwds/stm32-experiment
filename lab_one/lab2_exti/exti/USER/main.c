@@ -99,9 +99,9 @@ int main(void)
 
 //÷–∂œ∫Ø ˝≈‰÷√
 
-void EXTI3_IRQHandler(void)
+void EXTI1_IRQHandler(void)
 {
-    if(EXTI_GetITStatus(EXTI_Line3) != RESET)
+    if(EXTI_GetITStatus(EXTI_Line1) != RESET)
     {
 			
 			//	GPIO_WriteBit(GPIOB,GPIO_Pin_5,(BitAction)((1-GPIO_ReadOutputDataBit(GPIOB,GPIO_Pin_5))));
@@ -109,7 +109,7 @@ void EXTI3_IRQHandler(void)
 		sb_1();
 			GPIO_Write(GPIOA, ~0x0000);
         
-        EXTI_ClearITPendingBit(EXTI_Line3);
+        EXTI_ClearITPendingBit(EXTI_Line1);
     }
 
 }
@@ -124,7 +124,7 @@ void EXTI4_IRQHandler(void)
 			
 			
 			Delay_ms(300);
-			sb_1();
+		
       sb_2();
 			GPIO_Write(GPIOA, ~0x0000);
         EXTI_ClearITPendingBit(EXTI_Line4);
